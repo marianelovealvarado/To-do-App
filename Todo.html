@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<script src="angular.min.js"></script>
+<script src="angular.js"></script>
+<script src="index.css"></script>
+<body ng-app="myApp" ng-controller="todoCtrl">
+    <title>To do List</title>
+<center>
+<h2>To-do List</h2>
+
+<form ng-submit="todoAdd()">
+    <input type="text" ng-model="todoInput" size="40" placeholder="Enter task">
+    <input type="submit" value="Add Task">
+</form>
+
+<br>
+
+<div ng-repeat="x in todoList">
+    <input type="checkbox" ng-model="x.done"> <span ng-bind="x.todoText"></span>
+</div>
+
+<p><button ng-click="remove()">Delete task</button></p>
+
+<style>
+    
+body {
+      background-color: cornsilk;  
+    }
+    
+button {
+        font-size: 16px;
+    }
+form {
+        font-size: 16px;
+    }
+</style>
+
+</body>
+</html>
