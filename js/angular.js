@@ -1,7 +1,7 @@
 
 var app = angular.module('myApp', []); 
 app.controller('todoCtrl', function($scope) {
-    $scope.todoList = [{todoText:'', done:false}];
+    $scope.todoList = [{todoText:'Eat breakfats', done:false}];
 
     $scope.todoAdd = function() {
         $scope.todoList.push({todoText:$scope.todoInput, done:false});
